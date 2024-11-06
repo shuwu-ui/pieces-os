@@ -13,8 +13,6 @@
 # DEMO站
 **请善待公共服务，尽量自己搭建(不要搞黄，demo会崩溃）**
 
-~~[Vercel](https://pieces.nekomoon.cc)~~
-
 [Cloudflare worker反代koyeb](https://pieces.464888.xyz)
 
 [HuggingFace](https://chb2024-pieces-os.hf.space/hf)
@@ -199,7 +197,7 @@ docker run -d \
 ### 一键安装脚本(docker+本项目)，适用于Ubuntu,Debian......
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/Nekohy/pieces-os/main/install.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/shuwu-ui/pieces-os/refs/heads/main/install.sh | sudo bash
 
 
 ```
