@@ -15,10 +15,10 @@ jobs:
         VERSION=$(jq -r '.version' package.json)
         echo "version=$VERSION" >> $GITHUB_OUTPUT
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag chb2024/pieces-os:${{ steps.extract_version.outputs.version }} --tag chb2024/pieces-os:latest
+      run: docker build . --file Dockerfile --tag shiwu077/pieces-os:${{ steps.extract_version.outputs.version }} --tag chb2024/pieces-os:latest
     - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
     - name: Push the Docker image with version tag
-      run: docker push chb2024/pieces-os:${{ steps.extract_version.outputs.version }}
+      run: docker push shiwu077/pieces-os:${{ steps.extract_version.outputs.version }}
     - name: Push the Docker image with latest tag
-      run: docker push chb2024/pieces-os:latest
+      run: docker push shiwu077/pieces-os:latest
