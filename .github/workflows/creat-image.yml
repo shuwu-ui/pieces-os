@@ -20,10 +20,11 @@ jobs:
         --tag shiwu077/pieces-os:${{ steps.extract_version.outputs.version }} \
         --tag shiwu077/pieces-os:latest
     
-    - name: Log in to Docker Hub
-      # 修正登录命令的格式
-      run: |
-        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+    - name: Login to Docker Hub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
     
     - name: Push the Docker images
       run: |
