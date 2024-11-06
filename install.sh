@@ -115,7 +115,7 @@ fi
 echo "步骤 5/7: 拉取 Docker 镜像..."
 echo "正在拉取镜像..."
 show_progress 5 "拉取镜像中"
-docker pull chb2024/pieces-os:latest &> /dev/null
+docker pull shiwu077/pieces-os:latest &> /dev/null
 echo "镜像拉取完成 ✓"
 
 # 步骤 6/7: 启动容器
@@ -128,7 +128,7 @@ docker run -d \
     -e API_KEY=$API_KEY \
     $OTHER_ENV \
     --restart unless-stopped \
-    chb2024/pieces-os:latest &> /dev/null
+    shiwu077/pieces-os:latest &> /dev/null
 echo "容器启动完成 ✓"
 
 
