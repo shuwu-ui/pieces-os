@@ -10,15 +10,40 @@
 如果帮助到了你，能否给一个Star呢？ 
 # 免责声明
 本项目仅供学习交流使用，不得用于商业用途，如有侵权请联系删除
-# DEMO站
-**请善待公共服务，尽量自己搭建(不要搞黄，demo会崩溃）**
-
-[Cloudflare worker反代koyeb](https://pieces.464888.xyz)
-
-[HuggingFace](https://chb2024-pieces-os.hf.space/hf)
-API_PREFIX环境变量为/hf
 
 # 一键部署
+## 一键安装脚本(docker+本项目)，适用于Ubuntu,Debian......
+
+```bash
+curl -sSL https://raw.githubusercontent.com/shuwu-ui/pieces-os/refs/heads/main/install.sh | sudo bash
+
+
+```
+
+根据提示输入即可
+
+注意事项：
+- 可以修改 `API_KEY` 用于保护您部署的docker
+- 可以修改端口映射的左侧数值（如 `-p 9000:8787`）
+- 右侧端口（8787）和其他默认配置请勿修改
+
+3. 管理容器：
+```bash
+## 停止容器
+docker stop pieces-os
+
+## 启动容器
+docker start pieces-os
+
+## 重启容器
+docker restart pieces-os
+
+## 删除容器
+docker rm pieces-os
+```
+
+请确保在使用服务时使用正确的 API_KEY 进行认证。
+
 ## Vercel部署后若修改参数请记得重新Redeploy
 
 [![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nekohy/pieces-os&project-name=Pieces-OS&repository-name=Pieces-OS)
@@ -194,34 +219,4 @@ docker run -d \
   chb2024/pieces-os:latest
 ```
 
-### 一键安装脚本(docker+本项目)，适用于Ubuntu,Debian......
 
-```bash
-curl -sSL https://raw.githubusercontent.com/shuwu-ui/pieces-os/refs/heads/main/install.sh | sudo bash
-
-
-```
-
-根据提示输入即可
-
-注意事项：
-- 可以修改 `API_KEY` 用于保护您部署的docker
-- 可以修改端口映射的左侧数值（如 `-p 9000:8787`）
-- 右侧端口（8787）和其他默认配置请勿修改
-
-3. 管理容器：
-```bash
-## 停止容器
-docker stop pieces-os
-
-## 启动容器
-docker start pieces-os
-
-## 重启容器
-docker restart pieces-os
-
-## 删除容器
-docker rm pieces-os
-```
-
-请确保在使用服务时使用正确的 API_KEY 进行认证。
