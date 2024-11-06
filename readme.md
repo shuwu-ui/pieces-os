@@ -1,5 +1,4 @@
 # 项目简介
-![img](https://raw.githubusercontent.com/pieces-app/pieces-os-client-sdk-for-csharp/main/assets/pieces-logo.png)
 
 逆向Pieces-OS GRPC流并转换为标准OpenAI接口的项目
 
